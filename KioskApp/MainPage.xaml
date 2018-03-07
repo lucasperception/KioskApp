@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="KioskApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KioskApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <WebView x:Name="WVWebBrowser" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,0,48" Canvas.ZIndex="-1" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" AllowDrop="True" AutomationProperties.LandmarkType="None" >
+        </WebView>
+        <CommandBar HorizontalAlignment="Center" DefaultLabelPosition="Collapsed" Canvas.ZIndex="99999" VerticalAlignment="Bottom" RequestedTheme="Light" Background="{x:Null}" >
+            <AppBarButton Icon="Back" Click="AppBarBack_Click" HorizontalAlignment="Center" VerticalAlignment="Top" RequestedTheme="Default"/>
+            <AppBarButton Icon="Home" Click="AppBarHome_Click" HorizontalAlignment="Center"/>
+            <AppBarButton Icon="Refresh" Click="AppBarRefresh_Click" HorizontalAlignment="Center"/>
+            <AppBarButton Icon="Forward" Click="AppBarForward_Click" HorizontalAlignment="Center"/>
+        </CommandBar>
+        <Rectangle HorizontalAlignment="Stretch" Height="48" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
+
+
+    </Grid>
+</Page>
